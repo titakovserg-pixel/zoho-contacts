@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { Head } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 
 // ✅ сохраняем результат defineProps в переменную
@@ -22,6 +23,9 @@ function save() {
 
 
 <template>
+  <Head title="Контакт. Редагування" />
+
+  <AuthenticatedLayout>
   <div class="max-w-2xl mx-auto p-6">
     <h1 class="text-2xl font-semibold mb-4">Редагування</h1>
     <div v-if="form.errors.zoho" class="text-red-600 mb-4">
@@ -53,4 +57,5 @@ function save() {
       </div>
     </form>
   </div>
+  </AuthenticatedLayout>
 </template>
