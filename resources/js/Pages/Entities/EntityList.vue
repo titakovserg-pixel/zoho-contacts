@@ -22,7 +22,7 @@ defineProps({
         <h1 class="text-2xl font-bold mb-4">Список записів</h1>
         <button @click="$inertia.visit(route('contact.add'))"
           class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
-          + Додати
+          + Створити контакт
         </button>
       </div>
 
